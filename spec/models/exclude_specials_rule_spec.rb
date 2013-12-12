@@ -16,14 +16,12 @@ describe ExcludeSpecialsRule do
   end
 
   context "promotion lists all products that are not excluded" do
-    before do
+    before :each do
       @promotion = create(:promotion)
       create(:product, :promotion_exclude => true)
       create(:product, :promotion_exclude => false)
       create(:product, :promotion_exclude => false)
-      promotion_rule = ExcludeSpecialsRule.new
-      promotion_rule.promotion = @promotion
-      promotion_rule.save
+      @promotion.rules.push ExcludeSpecialsRule.new
     end
 
     it "should have products" do

@@ -2,10 +2,10 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_promotion_exclude_specials_rule'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.summary     = 'Promtionrule for excluding special products'
   s.description = 'Creates an excludeflag on products to make it easy to exclude the product from promotions'
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.0.0'
 
   s.author    = 'Simon Træls Ravn'
   s.email     = 'cs2@cs2.dk'

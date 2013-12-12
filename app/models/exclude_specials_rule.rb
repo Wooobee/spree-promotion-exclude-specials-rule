@@ -4,6 +4,6 @@ class ExcludeSpecialsRule < Spree::PromotionRule
   end
 
   def products
-    Spree::Product.where(:promotion_exclude => false).all
+    Spree::Product.where(:promotion_exclude => false).to_a
   end
 end
