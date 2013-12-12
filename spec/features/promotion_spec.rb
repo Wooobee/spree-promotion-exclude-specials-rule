@@ -1,5 +1,6 @@
 describe "New promotions" do
   before :each do
+    Rails.application.config.spree.promotions.rules << ExcludeSpecialsRule
     sign_in_admin!(create(:admin_user))
     @promo = create(:promotion)
   end
