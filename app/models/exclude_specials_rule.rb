@@ -8,6 +8,6 @@ class ExcludeSpecialsRule < Spree::PromotionRule
   end
 
   def products
-    Spree::Product.where(:promotion_exclude => false).to_a
+    Spree::Variant.has_option(4,"false").to_a
   end
 end
